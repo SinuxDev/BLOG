@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Press+Start+2P&family=Roboto+Condensed:ital,wght@1,300&family=Roboto:wght@300&display=swap');
+
+:root{
+  --primary-color : #f9d949
+}
+
+*{
+  font-family: "Poppins", sans-serif;
+}
+
+.main{
+  width: 80%;
+  margin: auto;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+a{
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+nav div a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+nav div a.active{
+  color: white;
+  background-color: #000;
+  padding: 8px 8px;
+  border-radius: 12px;
+}
+
+.post{
+  width: 60%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.post img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.title{
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.date{
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+} 
+
+.details{
+  width: 80%;
+  margin: auto;
+
+}
+
+.detail-title{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.details img{
+  width: 100%;
+}
+
+.description{
+  color: #222;
+}
+
+.clockIcon,
+.arrowIcon{
+  width: 2rem;
+}
+
+.detail-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-section{
+  width: 50%;
+  margin: auto;
+}
+
+.form-section p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.form-section form div{
+  margin-top: 20px;
+}
+
+.form-section form div label{
+  display: block;
+  font-size: 18px;
+}
+
+.form-section form div input, textarea{
+  width: 100%;
+  border: 1px solid #222;
+  font-size: 18px;
+  padding: 8px 8px;
+}
+
+.btn{
+  color: white;
+  background-color: #000;
+  padding: 10px 15px;
+  font-size: 20px;
+  width: 20%;
+}
+
+.sm{
+  width: fit-content;
+  padding: 8px 10px;
+  font-size: 16px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.detail-footer{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
