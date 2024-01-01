@@ -6,6 +6,7 @@ import { loader as postsLoader } from "./pages/Posts";
 import Details from "./pages/Details";
 import { loader as detailsLoader } from "./pages/Details";
 import Edit from "./pages/Edit";
+import { action as detailAction } from "./pages/Details";
 
 function App() {
   const router = createBrowserRouter([
@@ -28,7 +29,8 @@ function App() {
         {
           path:"/post-details/:id", 
           element: <Details />, 
-          loader: detailsLoader
+          loader: detailsLoader,
+          action: detailAction,
         },
 
         {

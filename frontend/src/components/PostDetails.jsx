@@ -1,8 +1,18 @@
 import {CalendarDaysIcon, ArrowLeftIcon} from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
+import { Link, useSubmit } from "react-router-dom";
 
 const PostDetails = ({post}) => {
     const {description,image,title,date} = post;
+    const submit = useSubmit();
+
+    const postDeleteHandler = () => {
+      const confirmStatus = window.confirm("Are you sure that you want to delete");
+
+      if(confirmStatus){
+        submit(null,{method: "DELETE"})
+      }
+
+    }
 
   return (
     <>
@@ -24,7 +34,7 @@ const PostDetails = ({post}) => {
                 <Link to={"/edit-post/:id"} >
                   <p className="btn sm" >Edit</p>
                 </Link>
-                <p className="btn sm" >Delete</p>
+                <p className="btn sm" onClick={postDeleteHandler} >Delete</p>
             </div>
         </section>
     </>

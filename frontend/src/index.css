@@ -125,6 +125,7 @@ nav div a.active{
   padding: 10px 15px;
   font-size: 20px;
   width: 20%;
+  cursor: pointer;
 }
 
 .sm{
@@ -139,5 +140,5 @@ nav div a.active{
 .detail-footer{
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
