@@ -1,10 +1,8 @@
-import React from 'react'
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData, useRouteLoaderData } from 'react-router-dom';
 import PostItem from '../components/PostItem';
 
 const Posts = () => {
     const posts = useLoaderData();
-    console.log(posts);
   return (
     <>
         {

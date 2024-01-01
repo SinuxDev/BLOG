@@ -31,7 +31,7 @@ const PostDetails = ({post}) => {
             <img src={image} alt={title} />
             <p className='description' > {description} </p>
             <div className="detail-footer" >
-                <Link to={"/edit-post/:id"} >
+                <Link to={`edit-post`} >
                   <p className="btn sm" >Edit</p>
                 </Link>
                 <p className="btn sm" onClick={postDeleteHandler} >Delete</p>

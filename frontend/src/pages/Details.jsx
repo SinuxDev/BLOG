@@ -1,9 +1,9 @@
 import React from 'react'
-import { redirect, useLoaderData } from 'react-router-dom'
+import { redirect, useLoaderData, useRouteLoaderData } from 'react-router-dom'
 import PostDetails from '../components/PostDetails';
 
 const Details = () => {
-    const post = useLoaderData();
+    const post = useRouteLoaderData("post-detail");
   return (
     <>
         <PostDetails post = {post}  />

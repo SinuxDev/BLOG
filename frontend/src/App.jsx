@@ -7,12 +7,14 @@ import Details from "./pages/Details";
 import { loader as detailsLoader } from "./pages/Details";
 import Edit from "./pages/Edit";
 import { action as detailAction } from "./pages/Details";
+import Error from "./pages/Error";
 
 function App() {
   const router = createBrowserRouter([
     {
       path:"/",
       element: <Main />,
+      errorElement: <Error />,
       children: [
         {
           index:true, 
@@ -27,19 +29,25 @@ function App() {
         },
 
         {
-          path:"/post-details/:id", 
-          element: <Details />, 
+          path:":id",
+          id: "post-detail",
           loader: detailsLoader,
-          action: detailAction,
-        },
-
-        {
-          path:"/edit-post/:id",
-          element: <Edit />,
-        }
-      ]
-    }
-  ])
+          children:[
+              {
+                index: true,
+                element: <Details />, 
+                action: detailAction,
+              },
+      
+              {
+                path:"edit-post",
+                element: <Edit />,
+              },
+          ],
+        },       
+      ],
+    },
+  ]);
   return (
     <>
       <RouterProvider router={router} />
