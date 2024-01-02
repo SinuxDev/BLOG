@@ -5,7 +5,7 @@ const Edit = () => {
   const post = useRouteLoaderData("post-detail");
   return (
     <>
-        <PostForm header={"Edit your post now.."} btnText={"Edit Post"} oldPostData={post} />
+        <PostForm header={"Edit your post now.."} btnText={"Edit Post"} oldPostData={post} method={"PATCH"} />
     </>
   )
 }
