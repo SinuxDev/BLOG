@@ -1,16 +1,24 @@
 import React from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, Form, useActionData } from "react-router-dom";
 
 const AuthForm = () => {
+  const data = useActionData();
   const [searchParams, setSearchParams] = useSearchParams();
   const isLogin = searchParams.get("mode") === "login";
-  console.log(isLogin);
 
   return (
     <section className="form-section">
       <div>
         <p>{isLogin ? "Login to your account" : "Create Your new account"}</p>
-        <form action="">
+        {data && data.errors && (
+          <ul>
+            {Object.values(data.errors).map((error) => (
+              <li key={error}> {error} </li>
+            ))}
+          </ul>
+        )}
+        {data && data.message && <p> {data.message} </p>}
+        <Form method="POST">
           <div>
             <label htmlFor="">Email</label>
             <input
@@ -18,6 +26,7 @@ const AuthForm = () => {
               name="email"
               id="email"
               placeholder="Enter your email..."
+              required
             />
           </div>
           <div>
@@ -27,16 +36,17 @@ const AuthForm = () => {
               name="password"
               id="password"
               placeholder="Enter your password..."
+              required
             />
           </div>
           <button className="btn login-btn">
             {isLogin ? "Login" : "Register"}
           </button>
-        </form>
+        </Form>
         {isLogin ? (
           <p className="create-acc">
             Don't have an account ?
-            <Link to={"/auth?mode=register"}>Register Here</Link>
+            <Link to={"/auth?mode=signup"}>Register Here</Link>
           </p>
         ) : (
           <p className="create-acc">

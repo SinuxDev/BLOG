@@ -11,6 +11,7 @@ import Edit from "./pages/Edit";
 import { action as detailAction } from "./pages/Details";
 import Error from "./pages/Error";
 import Auth from "./pages/Auth";
+import { action as authAction } from "./pages/Auth";
 
 function App() {
   const router = createBrowserRouter([
@@ -34,6 +35,7 @@ function App() {
         {
           path: "/auth",
           element: <Auth />,
+          action: authAction,
         },
 
         {
