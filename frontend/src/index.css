@@ -36,7 +36,6 @@ nav div a.active {
   color: white;
   background-color: #000;
   padding: 8px 8px;
-  border-radius: 12px;
 }
 
 .post {
@@ -128,6 +127,11 @@ textarea {
   cursor: pointer;
 }
 
+.login-btn {
+  margin-top: 10px;
+  width: 40%;
+}
+
 .error-page {
   display: flex;
   align-items: center;
@@ -181,6 +185,15 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.create-acc {
+  font-size: 16px !important;
+  font-weight: normal !important ;
+}
+
+.create-acc a {
+  text-decoration: underline !important;
 }
 
 @media (max-width: 480px) {

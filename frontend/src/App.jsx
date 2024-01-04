@@ -10,6 +10,7 @@ import { loader as detailsLoader } from "./pages/Details";
 import Edit from "./pages/Edit";
 import { action as detailAction } from "./pages/Details";
 import Error from "./pages/Error";
+import Auth from "./pages/Auth";
 
 function App() {
   const router = createBrowserRouter([
@@ -28,6 +29,11 @@ function App() {
           path: "/create-post",
           element: <Create />,
           action: postCreateAction,
+        },
+
+        {
+          path: "/auth",
+          element: <Auth />,
         },
 
         {
