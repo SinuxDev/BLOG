@@ -1,12 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { action as postCreateAction } from "./components/PostForm";
 import { action as postUpdateAction } from "./components/PostForm";
-import { loader as postsLoader } from "./pages/Posts";
 import { loader as detailsLoader } from "./pages/Details";
 import { action as detailAction } from "./pages/Details";
 import { action as authAction } from "./pages/Auth";
+import { loader as postsLoader } from "./pages/Posts";
 import { loader as LogoutLoader } from "./pages/Logout";
 import { tokenLoader } from "./util/auth";
+import { checkTokenLoader } from "./util/auth";
 import Main from "./layout/Main";
 import Posts from "./pages/Posts";
 import Create from "./pages/Create";
@@ -34,6 +35,7 @@ function App() {
           path: "/create-post",
           element: <Create />,
           action: postCreateAction,
+          loader: checkTokenLoader,
         },
 
         {
@@ -62,6 +64,7 @@ function App() {
               path: "edit-post",
               element: <Edit />,
               action: postUpdateAction,
+              loader: checkTokenLoader,
             },
           ],
         },
