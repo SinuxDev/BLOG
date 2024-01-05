@@ -1,10 +1,19 @@
 import React from "react";
-import { Link, useSearchParams, Form, useActionData } from "react-router-dom";
+import {
+  Link,
+  useSearchParams,
+  Form,
+  useActionData,
+  useNavigation,
+} from "react-router-dom";
 
 const AuthForm = () => {
   const data = useActionData();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const navigation = useNavigation();
+
+  const [searchParams] = useSearchParams();
   const isLogin = searchParams.get("mode") === "login";
+  const isSubmitting = navigation.state === "submitting";
 
   return (
     <section className="form-section">
@@ -39,8 +48,8 @@ const AuthForm = () => {
               required
             />
           </div>
-          <button className="btn login-btn">
-            {isLogin ? "Login" : "Register"}
+          <button className="btn login-btn" disabled={isSubmitting}>
+            {isSubmitting ? "Submitting" : isLogin ? "Login" : "Register"}
           </button>
         </Form>
         {isLogin ? (
@@ -51,7 +60,7 @@ const AuthForm = () => {
         ) : (
           <p className="create-acc">
             Already have an account ?
-            <Link to={"/auth?mode=login"}>Login Account</Link>
+            <Link to={"/auth?mode=login"}>Login Here</Link>
           </p>
         )}
       </div>
