@@ -218,7 +218,8 @@ textarea {
   .details,
   .nav,
   .form-section {
-    width: 99%;
+    width: 90%;
+    font-size: 14px;
   }
 }
 
