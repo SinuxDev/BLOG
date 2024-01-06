@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav>
       <Link to={"/"}>
-        <h1>BLOG.io</h1>
+        <h1>WEBLOG.io</h1>
       </Link>
       <div>
         <NavLink to={"/"}>Posts</NavLink>
