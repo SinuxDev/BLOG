@@ -3,7 +3,9 @@ import React from "react";
 const Loader = () => {
   return (
     <section>
-      <div class="loader"></div>
+      <div className="ctrl-loader">
+        <div className="loader"></div>
+      </div>
     </section>
   );
 };

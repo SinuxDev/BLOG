@@ -205,10 +205,14 @@ textarea {
 }
 
 /* HTML: <div class="loader"></div> */
-.loader {
+
+.ctrl-loader {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.loader {
   width: fit-content;
   font-size: 17px;
   font-family: monospace;
