@@ -205,28 +205,18 @@ textarea {
   text-decoration: underline !important;
 }
 
-@media (max-width: 480px) {
-  .main,
-  .details,
-  .form-section {
-    width: 90%;
-  }
-}
-
 @media (min-width: 400px) {
   .main,
   .details,
-  .nav,
   .form-section {
     width: 90%;
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
-@media (max-width: 399px) {
+@media (max-width: 400px) {
   .main,
   .details,
-  .nav,
   .form-section {
     width: 99%;
     font-size: 14px;
@@ -236,7 +226,6 @@ textarea {
 @media (max-width: 367px) {
   .main,
   .details,
-  .nav,
   .form-section {
     width: 100%;
     font-size: 14px;
@@ -246,7 +235,6 @@ textarea {
 @media (min-width: 360px) and (max-width: 370px) {
   .main,
   .details,
-  .nav,
   .form-section {
     width: 99%;
   }
