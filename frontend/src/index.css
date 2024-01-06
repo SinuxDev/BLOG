@@ -23,6 +23,7 @@ nav {
   top: 0;
   position: sticky;
   opacity: 0.8;
+  z-index: 1;
 }
 
 a {
@@ -212,6 +213,43 @@ textarea {
   }
 }
 
+@media (min-width: 400px) {
+  .main,
+  .details,
+  .nav,
+  .form-section {
+    width: 99%;
+  }
+}
+
+@media (max-width: 399px) {
+  .main,
+  .details,
+  .nav,
+  .form-section {
+    width: 99%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 367px) {
+  .main,
+  .details,
+  .nav,
+  .form-section {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 370px) {
+  .main,
+  .details,
+  .nav,
+  .form-section {
+    width: 99%;
+  }
+}
 /* HTML: <div class="loader"></div> */
 
 .ctrl-loader {
